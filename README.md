@@ -1,7 +1,6 @@
 # Hatch Version Action Example
 
-[![PyPI - Version](https://img.shields.io/pypi/v/hatch-version-action-example.svg)](https://pypi.org/project/hatch-version-action-example)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hatch-version-action-example.svg)](https://pypi.org/project/hatch-version-action-example)
+
 
 -----
 
