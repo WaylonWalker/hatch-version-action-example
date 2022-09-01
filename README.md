@@ -1,7 +1,5 @@
 # Hatch Version Action Example
 
-
-
 -----
 
 **Table of Contents**
