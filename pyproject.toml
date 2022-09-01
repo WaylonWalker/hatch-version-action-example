@@ -26,6 +26,17 @@ classifiers = [
 dependencies = []
 dynamic = ["version"]
 
+[project.optional-dependencies]
+dev = [
+ "black",
+ "isort",
+ "seed-isort-config",
+ "flake8",
+ "pytest",
+ "pytest-cov",
+ "pytest-mock",
+]
+
 [project.urls]
 Documentation = "https://github.com/unknown/hatch-version-action-example#readme"
 Issues = "https://github.com/unknown/hatch-version-action-example/issues"
@@ -36,12 +47,27 @@ path = "hatch_version_action_example/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
-  "pytest",
-  "pytest-cov",
+ "black",
+ "isort",
+ "seed-isort-config",
+ "flake8",
+ "pytest",
+ "pytest-cov",
+ "pytest-mock",
 ]
 [tool.hatch.envs.default.scripts]
 cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=hatch_version_action_example --cov=tests"
 no-cov = "cov --no-cov"
+lint = "flake8 hatch_version_action_example"
+format = "black --check hatch_version_action_example"
+sort_imports = "isort hatch_version_action_example"
+test-lint = [
+ "lint",
+ "format",
+ "seed-isort-config",
+ "sort-imports",
+ "cov",
+]
 
 [[tool.hatch.envs.test.matrix]]
 python = ["37", "38", "39", "310", "311"]
@@ -59,3 +85,7 @@ exclude_lines = [
   "if __name__ == .__main__.:",
   "if TYPE_CHECKING:",
 ]
+
+[tool.isort]
+profile = "black"
+known_third_party = []
