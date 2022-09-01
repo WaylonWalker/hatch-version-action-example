@@ -60,7 +60,7 @@ cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=hatch_
 no-cov = "cov --no-cov"
 lint = "flake8 hatch_version_action_example"
 format = "black --check hatch_version_action_example"
-sort_imports = "isort hatch_version_action_example"
+sort-imports = "isort hatch_version_action_example"
 test-lint = [
  "lint",
  "format",
