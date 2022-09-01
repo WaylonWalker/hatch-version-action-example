@@ -32,4 +32,4 @@ jobs:
 
       - run: pip install hatch
 
-      - uses: waylonwalker/hatch-version-action
+      - uses: waylonwalker/hatch-version-action@v1
