@@ -1,6 +1,7 @@
 # Hatch Version Action Example
 
 
+
 ## Installation
 
 ```console
