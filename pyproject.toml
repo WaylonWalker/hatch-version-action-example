@@ -31,7 +31,6 @@ dev = [
  "black",
  "isort",
  "seed-isort-config",
- "flake8",
  "pytest",
  "pytest-cov",
  "pytest-mock",
