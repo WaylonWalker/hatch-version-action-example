@@ -29,3 +29,5 @@ jobs:
       - uses: waylonwalker/hatch-version-action@v3
         with:
           before-command: "test-lint"
+        env:
+          GH_TOKEN: ${{ github.token }}
